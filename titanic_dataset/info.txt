@@ -1,1 +1,4 @@
 Dataset downloaded from Kaggle
+
+Complie and run using:
+  ./bin/spark-shell -i $PATH/titanic_dataset.scala
