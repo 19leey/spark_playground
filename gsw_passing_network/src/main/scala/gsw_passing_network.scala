@@ -7,11 +7,16 @@ import org.graphframes._
 
 object GSWPassNet {
   def main(args: Array[String]) {
+    //initialize spark session
+    va spark = SparkSession.builder.appName("GSW Passing Network Graph").getOrCreate()
+    
+    import spark.implicits._
+    
     //load data
       val passes_data = spark.read.format("csv")
         .option("inferSchema", "true")
         .option("header", "true")
-        .load(args[0])  // local file path
+        .load(args(0))  // local file path
 
     //initalize 'id' values
       val edit_passes_data = passes_data.withColumn("id", split($"PLAYER", ",")
@@ -26,7 +31,7 @@ object GSWPassNet {
       val passes_raw = spark.read.format("csv")
         .option("inferSchema", "true")
         .option("header", "true")
-        .load(args[1])  // local file path
+        .load(args(1))  // local file path
 
         //'raw.csv' created using java
         /*
@@ -64,7 +69,7 @@ object GSWPassNet {
         }
         */
 
-      val e = raw
+      val e = passes_raw
         .withColumn("src", split($"PLAYER", ",").getItem(0)).drop("PLAYER")
         .withColumn("dst", split($"PASS_TO", ",").getItem(0)).drop("PASS_TO")
         .drop("PASS")
@@ -87,6 +92,6 @@ object GSWPassNet {
         g.shortestPaths.landmarks(Seq("Curry", "Thompson")).run.show(false)
         g.triangleCount.run.show(false)
         g.connectedComponents.run.show(false)
-        g.stronglyConnectedComponents.maxIter(10).run.show(FamilySize)
+        g.stronglyConnectedComponents.maxIter(10).run.show(false)
   }
 }
