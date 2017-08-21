@@ -1,4 +1,8 @@
-//Titanic Dataset - Spark
+/* Titanic Dataset - Spark */
+
+//Import dependencies
+import org.apache.spark.sql._
+import org.apache.spark.sql.functions._
 
 //Load Dataset
   val testDF = spark.read.format("csv")
