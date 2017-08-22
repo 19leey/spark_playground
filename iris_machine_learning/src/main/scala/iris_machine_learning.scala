@@ -1,6 +1,8 @@
 /* Iris Dataset Machine Learning */
 
 //import dependencies
+  import org.apache.spark.sql._
+  import org.apache.spark.sql.functions._
   import org.apache.spark.ml._
   import org.apache.spark.ml.feature._
   import org.apache.spark.ml.classification._
@@ -20,7 +22,7 @@ object IrisML {
       iris.show(false)
 
     //edit data set - features vector and type column
-      val assembeler = new VectorAssembler().setInputCol(Array("SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm")).setOutputCol("features")
+      val assembeler = new VectorAssembler().setInputCols(Array("SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm")).setOutputCol("features")
       val iris_data = assembeler.transform(iris).withColumnRenamed("Species", "type").select("features", "type")
 
 
