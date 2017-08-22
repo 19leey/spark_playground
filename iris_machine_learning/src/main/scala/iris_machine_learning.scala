@@ -41,5 +41,6 @@ object IrisML {
 
     //LogisticRegression - ONLY works for numerical values(not catagorical aka. strings)
 
+    spark.stop()
   }
 }
