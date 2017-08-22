@@ -33,42 +33,7 @@ object GSWPassNet {
         .option("header", "true")
         .load(args(1))  // local file path
 
-        //'raw.csv' created using java
-        /*
-        import java.io.*;
-
-        public class Sandbox {
-
-          public static void main(String[] args) {
-            try {
-              File file = new File("passes.csv");
-              FileReader fr = new FileReader(file);
-              BufferedReader br = new BufferedReader(fr);
-              PrintWriter pw = new PrintWriter(new FileWriter("out.txt"));
-
-              String header = br.readLine();
-              System.out.println(header);
-              pw.write(header);
-              pw.write("\n");
-              String line;
-              while ((line = br.readLine()) != null) {
-                String[] word = line.split(",");
-                int passes = Integer.parseInt(word[4]);
-                for(int i = 0; i < passes; i++) {
-                  System.out.println(line);
-                  pw.write(line);
-                  pw.write("\n");
-                }
-              }
-              fr.close();
-              pw.close();
-            } catch (IOException e) {
-              e.printStackTrace();
-            }
-          }
-        }
-        */
-
+      //'raw.csv' created using java
       val e = passes_raw
         .withColumn("src", split($"PLAYER", ",").getItem(0)).drop("PLAYER")
         .withColumn("dst", split($"PASS_TO", ",").getItem(0)).drop("PASS_TO")
