@@ -1,4 +1,4 @@
-//generate raw.csv for gsw network
+//generate raw.csv for gsw network graph
 
 //import dependencies
 import java.io.*;
