@@ -8,15 +8,22 @@
   
 ### Golden State Warriors: Passing Network
 * Testing out Spark's GraphX/GraphFrame API
-* Generate a network graph of each player's passes
-* Run GraphFrame algorithims on graph
+* Generate and analyze a network graph of each player's passes
 
 ### Iris Machine Learning
+* Use MLlib/ML Spark library
+* Train program to catagorize iris measurments to species
 
-### complied and run using:
+### Building Security
+* Generate a graph of a building's layout
+* Given input of a person's path, detect anomalies
+ * Use motif finding
+
+#### Installed dependencies:
 ~~~~
 scala 2.12.2
 OpenJDK 64-Bit Java 1.8.0_131
 spark 2.2.0
 sbt 0.13.15
+graphframes 0.5.0
 ~~~~
