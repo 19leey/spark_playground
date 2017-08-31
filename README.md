@@ -9,6 +9,7 @@
 ### Golden State Warriors: Passing Network
 * Testing out Spark's GraphX/GraphFrame API
 * Generate and analyze a network graph of each player's passes
+* Heavily based on [this](http://opiateforthemass.es/articles/analyzing-golden-state-warriors-passing-network-using-graphframes-in-spark/) project
 
 ### Iris Machine Learning
 * Use MLlib/ML Spark library
@@ -17,7 +18,7 @@
 ### Building Security
 * Generate a graph of a building's layout
 * Given input of a person's path, detect anomalies
- * Use motif finding
+	* Use of motif finding
 
 #### Installed dependencies:
 ~~~~
