@@ -8,7 +8,7 @@ import org.graphframes._
 object GSWPassNet {
   def main(args: Array[String]) {
     //initialize spark session
-    va spark = SparkSession.builder.appName("GSW Passing Network Graph").getOrCreate()
+    val spark = SparkSession.builder.appName("GSW Passing Network Graph").getOrCreate()
     
     import spark.implicits._
     
