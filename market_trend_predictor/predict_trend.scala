@@ -8,9 +8,9 @@ import java.time._
 
 // read in the raw historical data
 // S&P 500, Dow Jones 30, and NASDAQ
-val sp_raw_data = spark.read.format("csv").option("inferSchema", "true").option("header", "true").load("Desktop/predict/SP_500.csv")
-val dj_raw_data = spark.read.format("csv").option("inferSchema", "true").option("header", "true").load("Desktop/predict/DJ_30.csv")
-val nasdaq_raw_data = spark.read.format("csv").option("inferSchema", "true").option("header", "true").load("Desktop/predict/NASDAQ.csv")
+val sp_raw_data = spark.read.format("csv").option("inferSchema", "true").option("header", "true").load(".../data/SP_500.csv")
+val dj_raw_data = spark.read.format("csv").option("inferSchema", "true").option("header", "true").load(".../data/DJ_30.csv")
+val nasdaq_raw_data = spark.read.format("csv").option("inferSchema", "true").option("header", "true").load(".../data/NASDAQ.csv")
 
 // format data for merging(union)
 // add ticker symbol to differentiate
