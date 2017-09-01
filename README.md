@@ -26,6 +26,8 @@
 	* Historical data from Yahoo Finance (1985-2017)
 * Time series forecasting using the ARIMA model
 	* Inaccurate - too many variables unaccounted for
+	
+### Data Streaming
 
 #### Installed dependencies:
 ~~~~
@@ -35,4 +37,6 @@ spark 2.2.0
 sbt 0.13.15
 graphframes 0.5.0
 spark-ts 0.4.0
+kafka 0.11.0.0
+zookeeper // should come with kafka
 ~~~~
