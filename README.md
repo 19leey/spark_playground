@@ -25,6 +25,7 @@
 * Predict market trends based on S&P 500, DOW, and NASDAQ
 	* Historical data from Yahoo Finance (1985-2017)
 * Time series forecasting using the ARIMA model
+	* Inaccurate - too many variables unaccounted for
 
 #### Installed dependencies:
 ~~~~
@@ -33,4 +34,5 @@ OpenJDK 64-Bit Java 1.8.0_131
 spark 2.2.0
 sbt 0.13.15
 graphframes 0.5.0
+spark-ts 0.4.0
 ~~~~
