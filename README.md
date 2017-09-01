@@ -20,6 +20,12 @@
 * Given input of a person's path, detect anomalies
 	* Use of motif finding
 
+### Market Trend Predictor
+* Implementation of the Spark-TS library
+* Predict market trends based on S&P 500, DOW, and NASDAQ
+	* Historical data from Yahoo Finance (1985-2017)
+* Time series forecasting using the ARIMA model
+
 #### Installed dependencies:
 ~~~~
 scala 2.12.2
